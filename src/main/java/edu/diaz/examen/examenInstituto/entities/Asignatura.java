@@ -22,7 +22,49 @@ public class Asignatura {
     @Column (name = "creditos", nullable = false)
     private int creditos;
 
-    @Column (name = "nombre", unique = false,nullable = false)
-    private String nombre;
+    @Column (name = "codigo", unique = false, nullable = false)
+    private String codigo;
 
+    public Asignatura() {
+    }
+
+    public Asignatura(String nombre, int creditos, String codigo) {
+        this.nombre = nombre;
+        this.creditos = creditos;
+        this.codigo = codigo;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getCreditos() {
+        return creditos;
+    }
+
+    public void setCreditos(int creditos) {
+        this.creditos = creditos;
+    }
+
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
+    }
+
+    
 }
